@@ -4,6 +4,7 @@
     "netlify-cli": "^13.1.2"
   },
   "scripts": {
-    "netlify": "./node_modules/.bin/netlify"
+    "netlify": "./node_modules/.bin/netlify",
+    "build": "dotenv -e .env npm run build"
   }
 }
