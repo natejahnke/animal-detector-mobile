@@ -1,5 +1,6 @@
 import { animals } from "../animals.js"; // Import an array of animal names from an external file
-
+import * as dotenv from "dotenv";
+dotenv.config();
 document.addEventListener("DOMContentLoaded", () => {
   // Wait for the DOM to be fully loaded before running the code
   const canvas = document.getElementById("canvas"); // Get the canvas element
