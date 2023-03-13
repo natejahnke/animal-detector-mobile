@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Animal Detector</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css" /> <!-- Import the Tailwind CSS framework -->
+  <script type="module" src="js/vision.js"></script> <!-- Import the JavaScript file that contains the image processing logic -->
+</head>
+<body class="bg-gray-100">
+  <div class="mx-auto max-w-xs p-4">
+    <h1 class="text-2xl font-bold text-center mb-4">Nate's AI Animal Detector</h1> <!-- Display the title of the page -->
+    <h3 class="text-gray-700 text-center">Upload an image of an animal to find out its name with Nate's AI Animal Detector</h3> <!-- Display a brief description of the page -->
+    <div class="flex flex-col justify-center mt-4">
+      <!-- <img src="elephant.jpg" alt="Placeholder Image" class="rounded-full"> -->
+      <canvas id="canvas" class="rounded-full max-h-80 w-auto object-cover"></canvas> <!-- Create a canvas element to display the uploaded image -->
+      <label for="fileinput" class="mt-4 text-center w-full rounded-lg px-8 py-2 text-xl border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-blue-100 duration-300" style="z-index: 2;"> <!-- Create a label element to serve as the button to upload an image -->
+        Upload Image
+      </label>
+      <input type="file" id="fileinput" accept="image/*" class="hidden max-h-full"> <!-- Create an input element of type "file" to allow the user to select an image -->
+        <div class="flex flex-col">
+          <h3 id="animalName" class="text-lg text-center font-bold"></h3> <!-- Display the recognized animal name in this HTML element -->
+          <h3 id="AIresponse" class="text-lg text-center"></h3> <!-- Display the full caption of the image in this HTML element -->
+        </div>
+    </div>
+  </div>
+  <footer class="bg-gray-900 text-gray-300 py-4 text-center fixed bottom-0 left-0 w-full">
+    <p>🔍<a href="https://github.com/natejahnke">https://github.com/natejahnke🔍</a></p>
+  </footer>
+</body>
+</html>
