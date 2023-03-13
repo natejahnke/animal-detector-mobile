@@ -5,6 +5,11 @@
   },
   "scripts": {
     "netlify": "./node_modules/.bin/netlify",
-    "build": "dotenv -e .env npm run build"
+    "build": "webpack --mode production"
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^8.0.1",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1"
   }
 }
